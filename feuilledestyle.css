@@ -190,10 +190,15 @@ animation: slider-1 15s infinite ease-in-out;
     max-width: 50%;
 }
 
-
-.slider-1 .conteneur .petit{
+.slider-1 .conteneur p{
     font-size: 40px;
 }
+.slider-1 .conteneur .petit{
+    font-size: 35px;
+}
+
+
+
 /* 
    5% par transition, nombre choisi arbitrairement.
 
