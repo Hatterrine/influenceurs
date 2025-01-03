@@ -1,0 +1,351 @@
+/*************************************************************************************************/
+/*                                                                                               */
+/*  I)                                   Preparation du menu                                     */
+/*                                                                                               */
+/*************************************************************************************************/
+ /*                   le but de cette partie est de faire un menu horizontale                   */
+ /*                                                                                              */
+ /*je retire les marges inférieur et les points de la boite*/
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+}/*Pour tout les élément je retire les marges et le padding*/
+
+
+body {
+    background-color: rgb(61, 63, 151) ;
+}
+
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #654991;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  width: 100%;
+}
+
+.text { 
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/*************************************************************/
+/* II La barre de Navigation du Haut (le bandeau de la page) */
+/*************************************************************/
+
+
+header {
+    background-color: rgb(17,20,78) ;
+    display: flex;
+}/* Dans le header je met une couleur de fond et mon display flex (pour m'assurer que les éléments fils directs seront alignés sur une ligne) */
+
+
+
+
+nav {
+    width:100%;
+    height:11rem;
+    align-items: center;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    grid-template-columns: repeat(5, 230px);
+    justify-content:center;
+    padding: 10px;
+    z-index: 1000; /* Assure que la barre reste au-dessus */
+} /* Dans la balise nav: je met l'image de ma bannière que je fait répéter sur l'axe x.  */
+/* L'image fera partie du background et je lui donne une taille et je la positionne à 20 pixels sur l'axe y  */
+/* Je dimentionne le tout  */
+
+.navig{
+    background-color: rgba(238,250,252,0.6);
+    padding: 30px;
+    height:3rem;
+    display: inline;
+    scroll-padding-bottom: 0px;
+    margin: 150px 0px 0px 0px;
+    font-size: 3em;
+    color: rgb(48, 11, 97);
+    font-weight: bold;
+}/* Dans les balises de class navig ()   */
+  
+.url {
+    
+    text-decoration: none;
+    
+}
+
+
+
+
+.url:hover
+{
+    --p: 100%;
+    --t: .3s;
+    color : rgb(40, 27, 53);
+} 
+
+
+
+.bouton-lien {
+  display: block;
+  background-color: #A66BE7;
+  border: 4px double #9434c8;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+
+
+.bouton-lien:hover{
+    background-color: #ffffff;
+    border: 2px solid #9434c8;
+    box-shadow: 10px 5px 5px #A66BE7;
+    color: #9434c8;
+    text-align: center;
+    font-size: 22px;
+}
+
+
+#house {
+  height: 70px;
+  align-self:center ;
+
+}
+
+.acc{
+    display:flex;
+    justify-content: flex-end;
+}
+
+
+#instag {
+  height: 70px;
+  align-self:center ;
+
+}
+
+
+/*************************************************************/
+/* III texte de la page 1 et 2 */
+/*************************************************************/
+
+.corps{
+    display: grid;
+    align-items: center;
+    grid-row-gap: 5em;
+    grid-template-columns: repeat(auto-fit, minmax(900px,1fr));
+    margin: 0 auto;
+    margin-bottom: 60px;
+    max-width: 1300px;
+    justify-content:center;
+}
+
+
+h1 {
+    color: white;
+    font-family: poppins;
+    font-size: 40px;
+    position: relative;
+    display: block;
+    width: fit-content;
+    background-color: #A66BE7;
+    margin: 10px;
+    margin-left: 30px;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    padding: 10px;
+}
+
+
+.qs{
+    color: white;
+    font-family: poppins;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #D1A8FF;
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+p {
+    color: white;
+    font-family: poppins;
+    font-size: 25px;
+}
+
+.footer{
+    background-color: #11144E;
+    color: white;
+}
+
+/*************************************************************/
+/* IV bas des page 1 et 2 */
+/*************************************************************/
+
+
+.cadre{
+
+background-color: #11144E;
+align-items: center;
+padding: 30px;
+margin: 0px;
+margin-top: 10px;
+display: flex;
+justify-content: center; /* Centre horizontalement */
+align-items: center;
+
+
+}
+
+
+.meme{
+    position: relative;
+    max-width: 100%; /* Optionnel, pour que l'image ne dépasse pas la taille de la div */
+    max-height: 100%;
+}
+
+/*************************************************************/
+/* V Bulle de la page 3 */
+/*************************************************************/
+
+#corps_p3{
+    display: grid;
+    align-items: center;
+    grid-row-gap: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(900px,1fr));
+    margin: 0 auto;
+    margin-bottom: 60px;
+    max-width: 1300px;
+    justify-content:center;
+}
+
+
+
+#title {
+    margin-bottom: 0px;
+}
+
+
+.message-container {
+  display: flex;
+  flex-direction: column; /* Empile les messages verticalement */
+  gap: 30px; /* Espace entre les messages */
+}
+
+.message-wrapper {
+  display: flex;
+  align-items: center; /* Aligne les avatars et les bulles verticalement */
+  gap: 10px; /* Espace entre l'image et la bulle */
+}
+
+.message-wrapper.right {
+  justify-content: flex-end; /* Aligne les éléments à droite */
+}
+
+.avatar {
+  width: 200px; /* Taille de l'avatar */
+  height: 200px;
+  border-radius: 50%; /* Forme circulaire */
+  object-fit: cover; /* Ajuste l'image pour remplir le conteneur sans déformation */
+}
+
+.message-bubble {
+  position: relative;
+  max-width: 600px;
+  padding: 15px;
+  background-color: #B4A6F4;
+  border-radius: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0; /* Supprime la marge inutile */
+}
+
+.message-left {
+  background-color: #B4A6F4;
+}
+
+.message-left::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* Place la pointe au milieu vertical de la bulle */
+  left: -10px; /* Pointe alignée à gauche de la bulle */
+  transform: translateY(-50%); /* Centre verticalement la pointe */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #B4A6F4 transparent transparent;
+}
+
+.message-right {
+  background-color: #B4A6F4;
+}
+
+.message-right::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* Place la pointe au milieu vertical de la bulle */
+  right: -10px; /* Pointe alignée à droite de la bulle */
+  transform: translateY(-50%); /* Centre verticalement la pointe */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #B4A6F4;
+}
+
+
+.mess {
+    color : black;
+    font-family: poppins;
+}
+
+
+

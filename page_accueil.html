@@ -1,0 +1,120 @@
+<!DOCTYPE HTML> 
+<html lang="fr">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link href="feuilledestyle.css" rel="stylesheet" type="text/css">
+		<title>accueil des influenceurs</title>
+	</head>
+	<body>
+			<header>
+				<nav> 
+					<a href="Page_accueil.html" class="acc"> <img alt="image d'une icone en forme de maison" src="accueil_house.png " id="house" ></a>
+					<a href="Points_positifs.html"  class="bouton-lien">Points Positifs</a>
+					<a href="Points_negatifs.html"  class="bouton-lien">Points Négatifs</a>
+					<a href="Point_de_vue.html"  class="bouton-lien">Point de vue des influenceurs</a>
+					<a href="Page_accueil.html"> <img alt="image d'une icone en forme de maison" src="insta.png " id="instag" ></a>
+				</nav>
+			</header>
+		<img src="fond_acc1.png" alt="fond écran 1" class="fond1">
+
+		<div class="fond2"> 
+			<div class="slider-container slider-1">
+    			<div class="slider">
+      				<div class="conteneur">
+        				<img src="amixem.jpg" alt="image amixem">
+        				<p> Clap Bonjour !</p>
+        				<p class="petit">Amixem </p>
+    				</div>
+      				<div class="conteneur">
+        				<img src="lena_1.png" alt="image amixem">
+        				<p> Transforme tes désirs en action</p>
+        				<p class="petit">Léna Situations </p>
+    				</div>
+      				<div class="conteneur">
+        				<img src="squezzie.png" alt="image Squeezie">
+        				<p> Est ce que c’est bon pour vous ? </p>
+        				<p class="petit"> Squeezie</p>
+    				</div>
+      				<div class="conteneur">
+        				<img src="aline.jpg" alt="image amixem">
+        				<p> Sport, blague et confiance en soi </p>
+        				<p class="petit"> Aline Dessine </p>
+    				</div>
+      				<div class="conteneur">
+        				<img src="amixem.jpg" alt="image amixem">
+        				<p> Clap Bonjour ! </p>
+         				<p class="petit"> Amixem </p>
+    				</div>
+    			</div>
+  			</div>
+  			<div class="cadre">
+  				<p id="grtxt" class="zone-texte">" Un influenceur est une personne qui utilise les réseaux sociaux pour diffuser ses opinions auprès des internautes. "</p>
+  				<div class="bulle"></div>
+  			<div id="sous_cadre">
+  				<p class="left"> Un influenceur ou créateur de contenu, est une profession qui s’est développé avec la popularisation des réseaux sociaux et de la culture du numérique, <br>
+ 
+				Un influenceur va utiliser sa présence en ligne pour partager régulièrement du contenu auprès de ses abonnés, cela peut prendre toutes les formes (post, photos, vidéogramme….), le contenue est souvent axé sur des thèmes spécifique comme la mode, le voyage, le lifestyle, la santé, les jeux vidéo….
+				<br> 
+				<br>
+				<br>
+				Un influenceur est une personne qui utilise les réseaux sociaux pour diffuser ses opinions auprès des internautes.
+				</p>
+				<div id="pour_meme"><img src="meme_acc.png" alt="meme" id="meme_acc">
+					<div class="overlay">
+    					<div class="text"><p>Selon le dictionnaire: <br><br><br>
+
+							Influence --> <br><br>
+
+ 							1 Fluide provenant des astre et agissant sur la destinée humaine.<br><br>
+
+							2 Action éxercé sur quelqu'un ou quelque chose.
+						</div>
+  					</div>
+				</div>
+			</div>
+			<details> 
+				<summary>Tu savais que ?</summary>
+				<p id="tu_savais">Paul Lazarsfeld connu comme le fondateur des enquêtes de recherche modernes est un sociologue des années 1940. Il a étudié comment les médias influencent les gens et il a découvert que les médias ne nous transmettent pas leurs messages directement dans la tête. Non, non ! Ce sont en réalité des "leaders d’opinion" (aussi appelés "influenceurs" pour ceux qui aiment le terme moderne) qui font le job. Ces gens-là influencent leurs potes, leur famille, et des inconnus sur Internet.<br> <br>
+					Alors, quand tu vois un influenceur sur Instagram ou YouTube te parler d’un produit, un peu comme s’il était ton meilleur pote, c’est en fait un leader d’opinion du 21e siècle. Pas de magie ici, c’est juste une bonne vieille théorie de Lazarsfeld qui explique pourquoi ces personnes sont capables de faire vendre des tonnes de produits. Ils sont l’équivalent des personnes qui, à l’époque de Lazarsfeld, influençaient tout leur cercle social avec leurs conseils. On considère donc Lazarsfeld comme celui à avoir développé le concept d’influenceur.<br> <br> 
+				Même si Lazarsfeld n’a pas bossé directement sur les influenceurs, il a découvert des concepts qu’on peut super bien appliquer aujourd’hui pour comprendre comment les influenceurs sont capables de changer notre façon de penser et de consommer.</p> 
+				
+		</details>
+		</div>
+	</div>
+	
+		
+
+
+	
+<script>
+const zoneTexte = document.querySelector('.zone-texte');
+const bulle = document.querySelector('.bulle');
+const cadre = document.querySelector('.cadre');
+
+cadre.addEventListener('mousemove', (e) => {
+    const rect = cadre.getBoundingClientRect();
+
+    // Calculer la position de la bulle
+    let x = e.clientX - rect.left - bulle.offsetWidth / 2;
+    let y = e.clientY - rect.top - bulle.offsetHeight / 2;
+
+    // Limiter la bulle pour qu'elle ne dépasse pas le cadre
+    x = Math.max(0, Math.min(x, rect.width - bulle.offsetWidth));
+    y = Math.max(0, Math.min(y, rect.height - bulle.offsetHeight));
+
+    // Appliquer la position à la bulle
+    bulle.style.left = `${x}px`;
+    bulle.style.top = `${y}px`;
+    bulle.style.opacity = 1; // Rendre la bulle visible
+});
+
+cadre.addEventListener('mouseleave', () => {
+    bulle.style.opacity = 0; // Cacher la bulle quand la souris quitte la zone
+});
+</script>
+<footer class="footer"> © Créer par Perrine Goget & Shivani Murthen. 
+	</footer>
+
+	</body>
+</html>
+

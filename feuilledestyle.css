@@ -1,0 +1,335 @@
+/*************************************************************************************************/
+/*                                                                                               */
+/*  I)                                   Preparation du menu                                     */
+/*                                                                                               */
+/*************************************************************************************************/
+ /*                   le but de cette partie est de faire un menu horizontale                   */
+ /*                                                                                              */
+ /*je retire les marges inférieur et les points de la boite*/
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+}/*Pour tout les élément je retire les marges et le padding*/
+
+
+body {
+    background-color: rgb(17,20,78) ;
+}
+
+
+
+/*************************************************************/
+/* II La barre de Navigation du Haut (le bandeau de la page) */
+/*************************************************************/
+
+
+header {
+    background-color: rgb(17,20,78) ;
+    display: flex;
+}/* Dans le header je met une couleur de fond et mon display flex (pour m'assurer que les éléments fils directs seront alignés sur une ligne) */
+
+
+
+
+nav {
+    width:100%;
+    height:11rem;
+    align-items: center;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    grid-template-columns: repeat(5, 230px);
+    justify-content:center;
+    padding: 10px;
+    z-index: 1000; /* Assure que la barre reste au-dessus */
+} /* Dans la balise nav: je met l'image de ma bannière que je fait répéter sur l'axe x.  */
+/* L'image fera partie du background et je lui donne une taille et je la positionne à 20 pixels sur l'axe y  */
+/* Je dimentionne le tout  */
+
+.navig{
+    background-color: rgba(238,250,252,0.6);
+    padding: 30px;
+    height:3rem;
+    display: inline;
+    scroll-padding-bottom: 0px;
+    margin: 150px 0px 0px 0px;
+    font-size: 3em;
+    color: rgb(48, 11, 97);
+    font-weight: bold;
+}/* Dans les balises de class navig ()   */
+  
+.url {
+    
+    text-decoration: none;
+    
+}
+
+
+
+
+.url:hover
+{
+    --p: 100%;
+    --t: .3s;
+    color : rgb(40, 27, 53);
+} 
+
+
+
+.bouton-lien {
+  display: block;
+  background-color: #A66BE7;
+  border: 4px double #9434c8;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+
+
+.bouton-lien:hover{
+    background-color: #ffffff;
+    border: 2px solid #9434c8;
+    box-shadow: 10px 5px 5px #A66BE7;
+    color: #9434c8;
+    text-align: center;
+    font-size: 22px;
+}
+
+
+#house {
+  height: 70px;
+  align-self:center ;
+
+}
+
+.acc{
+    display:flex;
+    justify-content: flex-end;
+}
+
+
+#instag {
+  height: 70px;
+  align-self:center ;
+
+}
+
+.fond1{
+
+    display: block; /* Évite les espaces blancs générés par les images en ligne */
+  width: 100%; /* L'image prend toute la largeur du parent */
+  height: auto; /* Maintient les proportions de l'image */
+  margin: 0; /* Supprime les marges par défaut */
+  position: relative; /* Permet d'interagir avec les éléments voisins si nécessaire */
+}
+
+
+
+/*************************************************************/
+/* III Le slider                                             */
+/*************************************************************/
+
+
+
+.fond2{
+  width: 100%; /* Le div prend toute la largeur */
+  position: absolute; /* Assurez-vous que l'image reste dans le flux normal */
+  height: auto; /* Hauteur du div */
+  background-image: url('fond_acc2.png'); /* URL de l'image */
+  background-repeat: repeat-x; /* permet de donner l'illusion que l'image se tend sur la largeur */
+  object-fit: cover; /* Remplit sans déformer */
+  margin: 0; /* Supprime les marges par défaut */
+}
+
+
+  
+
+.slider-1{
+  max-width: 600px;
+  height: 500px;
+  margin: 100px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+
+.slider-1 .slider {
+display: flex;
+animation: slider-1 15s infinite ease-in-out;
+
+}
+
+.slider-1 .conteneur {
+  background:   #39419c;
+  flex-shrink: 0;
+  padding: 72px 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 45px;
+  position: relative
+}
+
+.slider-1 .conteneur img {
+    max-width: 50%;
+}
+
+
+.slider-1 .conteneur .petit{
+    font-size: 40px;
+}
+/* 
+   5% par transition, nombre choisi arbitrairement.
+
+   reste divisé par nb de pauses
+   80(%) / 4 = 20(%) par pause
+*/
+
+@keyframes slider-1 {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+  25%,
+  45% {
+    transform: translateX(-100%);
+  }
+  50%,
+  70% {
+    transform: translateX(-200%);
+  }
+  75%,
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+} 
+
+
+
+
+.cadre{
+    background-color: #39419c; /* Arrière-plan du footer */
+  color: white; /* Couleur du texte */
+  padding: 20px; /* Espacement interne */
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;
+  flex-direction: column; 
+  overflow: hidden; /* Empêche la bulle de sortir du cadre */
+  position: relative;}
+
+#grtxt{
+max-width: 85rem;
+font-size: 3.4rem;
+line-height: 1.52;
+padding: 70px; /* Marge autour du texte */
+cursor: pointer;
+}
+
+
+.bulle {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(236, 171, 249, 0.5);
+            border-radius: 50%;
+            pointer-events: none; /* Permet de cliquer sur la zone de texte même si la bulle est dessus */
+            transition: opacity 0.3s;
+            opacity: 0; /* Initialement cachée */
+        }
+.left{
+    position: relative;
+    max-width: 50%;
+    padding: 40px;
+    font-size: 22px;
+}
+
+#sous_cadre{
+    display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;
+}
+
+
+
+
+#meme_acc {
+    height: 400px;
+    left : 19rem;
+    bottom: 26rem;
+  
+}
+
+
+#pour_meme {
+  position: relative;
+  width: 50%;
+}
+
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #654991;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+#pour_meme:hover .overlay {
+  width: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#tu_savais {
+    color: white;
+  font-size: 20px;
+  padding: 40px;
+}
+
+summary {
+    max-width: 85rem;
+font-size: 3.4rem;
+line-height: 1.52;
+padding: 40px; /* Marge autour du texte */
+}
+
+
+
+
