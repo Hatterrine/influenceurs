@@ -177,6 +177,7 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(900px,1fr));
     margin: 0 auto;
     margin-bottom: 60px;
+    margin-left: 60px;
     max-width: 1300px;
     justify-content:center;
 }
@@ -259,6 +260,7 @@ align-items: center;
     grid-row-gap: 100px;
     grid-template-columns: repeat(auto-fit, minmax(900px,1fr));
     margin: 0 auto;
+margin-left: 60px;
     margin-bottom: 60px;
     max-width: 1300px;
     justify-content:center;
