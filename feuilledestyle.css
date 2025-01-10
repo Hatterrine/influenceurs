@@ -40,9 +40,7 @@ nav {
     display: grid;
     grid-column-gap: 10px;
     grid-row-gap: 1em;
-    grid-template-columns: repeat(5, 230px);
-    justify-content:center;
-    padding: 10px;
+    grid-template-columns: repeat(5, 1fr);
     z-index: 1000; /* Assure que la barre reste au-dessus */
 } /* Dans la balise nav: je met l'image de ma bannière que je fait répéter sur l'axe x.  */
 /* L'image fera partie du background et je lui donne une taille et je la positionne à 20 pixels sur l'axe y  */
