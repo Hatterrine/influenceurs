@@ -46,8 +46,7 @@ body {
   width: 100%;
 }
 
-.text { 
-  white-space: nowrap; 
+.text {  
   color: white;
   font-size: 20px;
   position: absolute;
