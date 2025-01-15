@@ -78,13 +78,13 @@ nav {
 
 .bouton-lien {
   display: block;
-  background-color: #A66BE7;
-  border: 4px double #9434c8;
+  background-color: #11144E;
+  border: 4px double #E8D3FF;
   border-radius: 10px;
   padding: 10px;
   width: 200px;
   height: 50px;
-  color: #ffffff;
+  color: #E8D3FF;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
   text-align: center;
@@ -100,9 +100,9 @@ nav {
 
 .bouton-lien:hover{
     background-color: #ffffff;
-    border: 2px solid #9434c8;
-    box-shadow: 10px 5px 5px #A66BE7;
-    color: #9434c8;
+    border: 2px solid #D1A8FF;
+    box-shadow: 10px 5px 5px #D1A8FF;
+    color: #D1A8FF;
     text-align: center;
     font-size: 22px;
 }
@@ -147,7 +147,7 @@ nav {
   width: 100%; /* Le div prend toute la largeur */
   position: absolute; /* Assurez-vous que l'image reste dans le flux normal */
   height: auto; /* Hauteur du div */
-  background-image: url('fond_acc2.png'); /* URL de l'image */
+  background-image: url('fond_acc2_copie.png'); /* URL de l'image */
   background-repeat: repeat-x; /* permet de donner l'illusion que l'image se tend sur la largeur */
   object-fit: cover; /* Remplit sans déformer */
   margin: 0; /* Supprime les marges par défaut */
