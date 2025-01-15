@@ -309,6 +309,7 @@ cursor: pointer;
 }
 
 .text {
+  white-space: nowrap; 
   color: white;
   font-size: 20px;
   position: absolute;
